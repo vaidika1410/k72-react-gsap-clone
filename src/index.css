@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: 'lausanne-300';
+    src: url('/fonts/Lausanne-300.woff2');
+}
+
+@font-face {
+    font-family: 'lausanne-500';
+    src: url('/fonts/Lausanne-500.woff2');
+}
+
+.home-hero-text::selection, .home-paragraph::selection , .home-footer::selection  {
+    color: black;
+    background-color: #D3FD50;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.agency-section1-hero-text::selection, .agency-section1-paragraph-text::selection {
+    color: black;
+    background-color: #D3FD50;
+}
+
+.nav-right .right-navigations::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #D3FD50;
+    top: -100%;
+    transition: all ease-in-out 0.15s;
+}
+
+.nav-right .right-navigations:hover::before{
+    top: 0;
+}
+
+.nav-right button:hover .menu-bars {
+    background-color: black;
+}
