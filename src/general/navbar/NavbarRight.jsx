@@ -2,7 +2,6 @@ import gsap from "gsap/all"
 import { useLocation } from "react-router-dom"
 import { X } from 'lucide-react';
 import { useRef } from "react";
-import {projectPath} from '/k72-react-gsap-clone/projects'
 
 const NavbarRight = (navRight) => {
 
@@ -14,7 +13,7 @@ const NavbarRight = (navRight) => {
             image1: 'src/assets/MenuImages/link1_image1.jpg',
             image2: 'src/assets/MenuImages/link1_image2.jpg',
             text: 'See everything',
-            path: {projectPath}
+            path: '/k72-react-gsap-clone/projects'
         },
         {
             title: 'Agency',
@@ -134,14 +133,14 @@ const NavbarRight = (navRight) => {
                     <div className=" absolute w-full border-b border-b-white flex items-center justify-end flex-col mb-60 h-14/15">
                         {
                             links.map((link, idx) => {
-                                return (<a href={link.path}
+                                return <a href={link.path}
                                     key={idx}
                                     className="h-1/6 w-full  flex items-center justify-center uppercase font-[lausanne-500] border-t border-t-white"
                                 >
                                     <div className="">
                                         <h1 className="text-9xl pt-3">{link.title}</h1>
                                     </div>
-                                </a>)
+                                </a>
                             })
                         }
                     </div>
