@@ -2,10 +2,42 @@ import gsap from "gsap/all"
 import { useLocation } from "react-router-dom"
 import { X } from 'lucide-react';
 import { useRef } from "react";
+import {projectPath} from '/k72-react-gsap-clone/projects'
 
 const NavbarRight = (navRight) => {
 
     const currentPath = useLocation().pathname
+
+    const links = [
+        {
+            title: 'Work',
+            image1: 'src/assets/MenuImages/link1_image1.jpg',
+            image2: 'src/assets/MenuImages/link1_image2.jpg',
+            text: 'See everything',
+            path: {projectPath}
+        },
+        {
+            title: 'Agency',
+            image1: 'src/assets/MenuImages/link2_image1.jpg',
+            image2: 'src/assets/MenuImages/link2_image2.jpg',
+            text: 'know us',
+            path: '/k72-react-gsap-clone/agency'
+        },
+        {
+            title: 'Contact',
+            image1: 'src/assets/MenuImages/link3_image1.jpg',
+            image2: 'src/assets/MenuImages/link3_image1.jpg',
+            text: 'send us a fax',
+            path: '/k72-react-gsap-clone/'
+        },
+        {
+            title: 'blog',
+            image1: 'src/assets/MenuImages/link4_image1.jpg',
+            image2: 'src/assets/MenuImages/link4_image2.jpg',
+            text: 'read articles',
+            path: '/k72-react-gsap-clone/'
+        }
+    ]
 
     function displayMenu() {
         const tl = gsap.timeline()
@@ -46,36 +78,7 @@ const NavbarRight = (navRight) => {
         })
     }
 
-    const links = [
-        {
-            title: 'Work',
-            image1: 'src/assets/MenuImages/link1_image1.jpg',
-            image2: 'src/assets/MenuImages/link1_image2.jpg',
-            text: 'See everything',
-            path: '/k72-react-gsap-clone/projects'
-        },
-        {
-            title: 'Agency',
-            image1: 'src/assets/MenuImages/link2_image1.jpg',
-            image2: 'src/assets/MenuImages/link2_image2.jpg',
-            text: 'know us',
-            path: '/k72-react-gsap-clone/agency'
-        },
-        {
-            title: 'Contact',
-            image1: 'src/assets/MenuImages/link3_image1.jpg',
-            image2: 'src/assets/MenuImages/link3_image1.jpg',
-            text: 'send us a fax',
-            path: '/k72-react-gsap-clone/'
-        },
-        {
-            title: 'blog',
-            image1: 'src/assets/MenuImages/link4_image1.jpg',
-            image2: 'src/assets/MenuImages/link4_image2.jpg',
-            text: 'read articles',
-            path: '/k72-react-gsap-clone/'
-        }
-    ]
+    
 
 
     return (
