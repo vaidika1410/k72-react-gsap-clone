@@ -19,15 +19,16 @@ const PageTransition = () => {
         tl.from('.block', {
             y: '-100%',
             stagger: {
-                amount: -0.25
+                amount: -0.23
             }
         })
 
         tl.to('.block', {
             y: '100%',
             delay: 0,
+            duration: 0.5,
             stagger: {
-                amount: -0.25
+                amount: -0.23
             }
         })
 
@@ -37,7 +38,7 @@ const PageTransition = () => {
             duration: 0.3
         })
 
-        tl.to('block', {
+        tl.to('.block', {
             y: '0%'
         })
 
