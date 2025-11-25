@@ -7,37 +7,6 @@ const NavbarRight = (navRight) => {
 
     const currentPath = useLocation().pathname
 
-    const links = [
-        {
-            title: 'Work',
-            image1: 'src/assets/MenuImages/link1_image1.jpg',
-            image2: 'src/assets/MenuImages/link1_image2.jpg',
-            text: 'See everything',
-            path: '/k72-react-gsap-clone/projects'
-        },
-        {
-            title: 'Agency',
-            image1: 'src/assets/MenuImages/link2_image1.jpg',
-            image2: 'src/assets/MenuImages/link2_image2.jpg',
-            text: 'know us',
-            path: '/k72-react-gsap-clone/agency'
-        },
-        {
-            title: 'Contact',
-            image1: 'src/assets/MenuImages/link3_image1.jpg',
-            image2: 'src/assets/MenuImages/link3_image1.jpg',
-            text: 'send us a fax',
-            path: '/k72-react-gsap-clone/'
-        },
-        {
-            title: 'blog',
-            image1: 'src/assets/MenuImages/link4_image1.jpg',
-            image2: 'src/assets/MenuImages/link4_image2.jpg',
-            text: 'read articles',
-            path: '/k72-react-gsap-clone/'
-        }
-    ]
-
     function displayMenu() {
         const tl = gsap.timeline()
 
@@ -77,20 +46,49 @@ const NavbarRight = (navRight) => {
         })
     }
 
-    
+    const links = [
+        {
+            title: 'Work',
+            image1: 'src/assets/MenuImages/link1_image1.jpg',
+            image2: 'src/assets/MenuImages/link1_image2.jpg',
+            text: 'See everything',
+            path: '/projects'
+        },
+        {
+            title: 'Agency',
+            image1: 'src/assets/MenuImages/link2_image1.jpg',
+            image2: 'src/assets/MenuImages/link2_image2.jpg',
+            text: 'know us',
+            path: '/agency'
+        },
+        {
+            title: 'Contact',
+            image1: 'src/assets/MenuImages/link3_image1.jpg',
+            image2: 'src/assets/MenuImages/link3_image1.jpg',
+            text: 'send us a fax',
+            path: '/'
+        },
+        {
+            title: 'blog',
+            image1: 'src/assets/MenuImages/link4_image1.jpg',
+            image2: 'src/assets/MenuImages/link4_image2.jpg',
+            text: 'read articles',
+            path: '/'
+        }
+    ]
 
 
     return (
         <div>
             <div ref={navRight.navRight} className="nav-right absolute top-0 right-0 h-full left-[35%] font-[lausanne-500] text-xl flex">
                 <div className="h-[90%] bg-black text-white w-1/3 top-0 uppercase">
-                    <a href="/k72-react-gsap-clone/projects" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
+                    <a href="/projects" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
                         <h2 className='absolute mx-2'>projects</h2>
                     </a>
                 </div>
 
                 <div className="h-[140%] bg-black text-white w-2/4 top-0 flex items-end uppercase">
-                    <a href="/k72-react-gsap-clone/agency" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
+                    <a href="/agency" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
                         <h2 className='absolute mx-2'>agency</h2>
                     </a>
                 </div>
@@ -133,14 +131,14 @@ const NavbarRight = (navRight) => {
                     <div className=" absolute w-full border-b border-b-white flex items-center justify-end flex-col mb-60 h-14/15">
                         {
                             links.map((link, idx) => {
-                                return <a href={link.path}
+                                return (<a href={link.path}
                                     key={idx}
                                     className="h-1/6 w-full  flex items-center justify-center uppercase font-[lausanne-500] border-t border-t-white"
                                 >
                                     <div className="">
                                         <h1 className="text-9xl pt-3">{link.title}</h1>
                                     </div>
-                                </a>
+                                </a>)
                             })
                         }
                     </div>
