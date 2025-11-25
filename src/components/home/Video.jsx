@@ -6,7 +6,7 @@ const Video = () => {
         <video 
         className='h-full w-full object-cover'
         autoPlay muted loop 
-        src='/k72-react-gsap-clone/video.mp4' />
+        src='/k72-react-gsap-clone/k72-homepage-video.mp4' />
     </div>
   )
 }
