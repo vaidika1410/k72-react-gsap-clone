@@ -6,7 +6,7 @@ const Video = () => {
         <video 
         className='h-full w-full object-cover'
         autoPlay muted loop 
-        src='dist\k72-homepage-video.mp4' />
+        src='public\k72-homepage-video.mp4' />
     </div>
   )
 }

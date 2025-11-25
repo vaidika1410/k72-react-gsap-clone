@@ -52,28 +52,28 @@ const NavbarRight = (navRight) => {
             image1: 'src/assets/MenuImages/link1_image1.jpg',
             image2: 'src/assets/MenuImages/link1_image2.jpg',
             text: 'See everything',
-            path: '/projects'
+            path: '/k72-react-gsap-clone/projects'
         },
         {
             title: 'Agency',
             image1: 'src/assets/MenuImages/link2_image1.jpg',
             image2: 'src/assets/MenuImages/link2_image2.jpg',
             text: 'know us',
-            path: '/agency'
+            path: '/k72-react-gsap-clone/agency'
         },
         {
             title: 'Contact',
             image1: 'src/assets/MenuImages/link3_image1.jpg',
             image2: 'src/assets/MenuImages/link3_image1.jpg',
             text: 'send us a fax',
-            path: '/'
+            path: '/k72-react-gsap-clone/'
         },
         {
             title: 'blog',
             image1: 'src/assets/MenuImages/link4_image1.jpg',
             image2: 'src/assets/MenuImages/link4_image2.jpg',
             text: 'read articles',
-            path: '/'
+            path: '/k72-react-gsap-clone/'
         }
     ]
 
@@ -82,13 +82,13 @@ const NavbarRight = (navRight) => {
         <div>
             <div ref={navRight.navRight} className="nav-right absolute top-0 right-0 h-full left-[35%] font-[lausanne-500] text-xl flex">
                 <div className="h-[90%] bg-black text-white w-1/3 top-0 uppercase">
-                    <a href="/projects" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
+                    <a href="projects" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
                         <h2 className='absolute mx-2'>projects</h2>
                     </a>
                 </div>
 
                 <div className="h-[140%] bg-black text-white w-2/4 top-0 flex items-end uppercase">
-                    <a href="/agency" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
+                    <a href="agency" className='right-navigations flex items-end h-full w-full relative hover:text-black'>
                         <h2 className='absolute mx-2'>agency</h2>
                     </a>
                 </div>
