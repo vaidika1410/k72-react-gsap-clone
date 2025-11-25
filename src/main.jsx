@@ -8,7 +8,7 @@ import PageTransition from './general/pageTransition.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/k72-clone">
+    <BrowserRouter basename="/k72-react-gsap-clone">
       <ScrollToTop />
       <PageTransition />
       <App />
