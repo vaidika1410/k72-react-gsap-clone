@@ -41,3 +41,8 @@
 .nav-right button:hover .menu-bars {
     background-color: black;
 }
+
+.all-links:first-child{
+    border-top: 1px solid white;
+}
+

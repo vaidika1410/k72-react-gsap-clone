@@ -5,13 +5,16 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import ScrollToTop from './general/ScrollToTop.jsx'
 import PageTransition from './general/pageTransition.jsx'
+import NavContext from './general/navbar/NavContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/k72-react-gsap-clone">
+    <BrowserRouter>
       <ScrollToTop />
       <PageTransition />
-      <App />
+      <NavContext>
+        <App />
+      </NavContext>
     </BrowserRouter>
   </StrictMode>,
 )
